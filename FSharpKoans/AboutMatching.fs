@@ -15,7 +15,7 @@ module ``04: Match expressions`` =
     let ``01 Basic match expression`` () =
         match 8000 with
         | 8000 -> "Insufficient power-level"
-        | _ ->
+        | _ -> ""
         
 
     [<Test>]
@@ -23,7 +23,7 @@ module ``04: Match expressions`` =
         let result =
             match 9001 with
             | 9001 ->  // <-- use an identifier pattern here!
-                match _ + 1000 with
+                match __ + 1000 with
                 | 1001 -> "Hah! It's a palindromic number!"
                 | x -> "Some number."
             | x -> "I should have matched the other expression."

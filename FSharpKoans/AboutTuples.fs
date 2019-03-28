@@ -36,12 +36,12 @@ module ``06: Tuples`` =
             | name, "veggies" -> name + " likes vegetables"
             | name, "fish" -> name + " likes seafood"
             | name, "chicken" -> name + " crows about their food"
-            | FILL__ME_IN, FILL__ME_IN -> __ + " loves to eat " + __
+            | "Teresa", "pasta" -> __ + " loves to eat " + __
         result |> should equal "Teresa loves to eat pasta"   
    
     [<Test>]
     let ``05 The type of a tuple is the contained types separated by '*' symbols`` () =
-        let a = 3, 5, "hi", 'x', 7.22
+        let a = 3, 5, "hi", 'x', true
         a |> should be ofType<int * int * string * char * bool>
 
     [<Test>]
@@ -49,5 +49,5 @@ module ``06: Tuples`` =
         // A single _ is a wildcard pattern, NOT a space to fill things in.
         // Reminder: A wildcard pattern successfully matches ANYTHING.
         let name, _, _, weapon_name = "Shinji", 9103, true, "Unit 01"
-        name |> should equal __
-        weapon_name |> should equal __
+        name |> should equal "Shinji"
+        weapon_name |> should equal "Unit 01"
