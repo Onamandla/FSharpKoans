@@ -66,7 +66,12 @@ module ``04: Match expressions`` =
     [<Test>]
     let ``05 Using a mapping function`` () =
         let mapper = function
-            | 3 -> "Joey" // write the cases for this function!
+            | 3 -> "Joey" 
+            | 8 -> "Bingo"
+            | 11 -> "Kelvin"
+            | 15 -> "Kelvin"
+            | _ -> ""
+            // write the cases for this function!
         mapper 3 |> should equal "Joey"
         mapper 8 |> should equal "Bingo"
         mapper 11 |> should equal "Kelvin"

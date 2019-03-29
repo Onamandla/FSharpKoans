@@ -94,8 +94,8 @@ module ``10: Parametric polymorphism`` =
         let a = Secnod (6.55, 7)
         let b = Thrid (fun k -> true, k, 8)
         // how do you write a generic type?
-        a |> should be ofType<FILL_ME_IN>
-        b |> should be ofType<FILL_ME_IN>
+        a |> should be ofType<GenericDiscriminatedUnionExample<float,int>>
+        b |> should be ofType<GenericDiscriminatedUnionExample<'a,bool>> //TBC
 
     type MyDiscriminatedUnion =
     | Furoth of FILL_ME_IN
