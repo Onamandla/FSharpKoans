@@ -56,7 +56,7 @@ module ``07: On the Record`` =
             | { Name="Pikachu"; Attack=a } -> a/2
             | { Name="Raichu"; Attack=a } -> a/3
             | { Attack=blah; Defense=lol } -> (blah + lol) / 2
-        result |> should equal __
+        result |> should equal 30
 
     [<Test>]
     let ``05 Accessing record members using dot syntax`` () =

@@ -84,12 +84,12 @@ module ``02: About Binding`` =
 
     [<Test>]
     let ``04 We can compare values using F#'s comparison operators`` () =
-        1 |???| 2 |> should equal false
-        2 |???| 1 |> should equal false
-        1 |???| 1 |> should equal true
-        1 |???| 1 |> should equal true
-        () |???| () |> should equal true
-        () |???| () |> should equal true
+        1 > 2 |> should equal false
+        2 < 1 |> should equal false
+        1 = 1 |> should equal true
+        1 = 1 |> should equal true
+        () > () |> should equal false
+        () = () |> should equal true
 
     [<Test>]
     let ``05 There's a `not` function instead of a `not` operator`` () =

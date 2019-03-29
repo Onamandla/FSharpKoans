@@ -32,12 +32,11 @@ module ``06: Tuples`` =
     [<Test>]
     let ``04 Using a tuple in a match expression`` () =
         let result =
-            match "Teresa", "pasta" with
+             match "Teresa", "pasta" with
             | name, "veggies" -> name + " likes vegetables"
             | name, "fish" -> name + " likes seafood"
             | name, "chicken" -> name + " crows about their food"
-            | "Teresa", "pasta" -> __ + " loves to eat " + __
-            | _, _ -> ""
+            | _, "pasta" -> __ + " loves to eat " + __
         result |> should equal "Teresa loves to eat pasta"   
    
     [<Test>]
